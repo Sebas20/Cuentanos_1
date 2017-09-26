@@ -75,6 +75,7 @@ public class ExpandibleListViewAdapter extends BaseExpandableListAdapter {
 
 
         TextView txtView = new TextView(context);
+        txtView.setBackgroundColor(context.getResources().getColor(R.color.lightblue));
         txtView.setText(groupNames[i]);
         txtView.setPadding(100,0,0,0);
         txtView.setTextColor(Color.BLACK);

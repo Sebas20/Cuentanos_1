@@ -8,7 +8,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ExpandableListView;
+import android.widget.Toast;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -21,7 +27,8 @@ public class ListaLugares extends AppCompatActivity {
     private ExpandableListView listview;
     //private ImageView img;
     private int posConsulta;
-    private String[] padres = new String[50];;
+    private String[] padres = new String[50];
+    ;
     private String[][] hijos = new String[50][50];
     private int[][] idHijos = new int[50][50];
     private int[] cntHijos = new int[50];
@@ -47,10 +54,10 @@ public class ListaLugares extends AppCompatActivity {
         }
     }*/
 
-    public boolean buscar(String compare){
+    public boolean buscar(String compare) {
         posConsulta = 0;
-        for(String nombre:nombres){
-            if(compare.equals(nombre)){
+        for (String nombre : nombres) {
+            if (compare.equals(nombre)) {
                 return true;
             }
             posConsulta++;
@@ -71,12 +78,14 @@ public class ListaLugares extends AppCompatActivity {
         public void onCreate(SQLiteDatabase db) {
             //db.execSQL(query);
         }
+
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
             // This database is only a cache for online data, so its upgrade policy is
             // to simply to discard the data and start over
             //db.execSQL(query);
             onCreate(db);
         }
+
         public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
             onUpgrade(db, oldVersion, newVersion);
         }
@@ -116,13 +125,18 @@ public class ListaLugares extends AppCompatActivity {
         /*img = (ImageView) findViewById(R.id.imagen);
         Picasso.with(ListaLugares.this).load("http://i.imgur.com/DvpvklR.png").into(img);*/
 
-        Log.i("consulta",consulta);
-
+        Log.i("consulta", consulta);
+        try {
+            deployDatabase();
+        } catch (IOException e) {
+            e.printStackTrace();
+            Toast.makeText(ListaLugares.this,"Error Base de datos",Toast.LENGTH_SHORT).show();
+        }
         FeedReaderDbHelper mDbHelper = new FeedReaderDbHelper(getApplication());
         SQLiteDatabase db = mDbHelper.getWritableDatabase();
 
         String[] projection = {
-                COLUMN_NAME_ID ,
+                COLUMN_NAME_ID,
                 COLUMN_NAME_CUIDAD,
                 COLUMN_NAME_NOMBRE,
                 COLUMN_NAME_TELEFONO,
@@ -151,19 +165,19 @@ public class ListaLugares extends AppCompatActivity {
 
         int i = 0;
         int j = 0;
-        while(cursor.moveToNext()) {
+        while (cursor.moveToNext()) {
             String nombre = cursor.getString(cursor.getColumnIndexOrThrow("nombre"));
             String cuidad = cursor.getString(cursor.getColumnIndexOrThrow("cuidad"));
             String telefono = cursor.getString(cursor.getColumnIndexOrThrow("telefono"));
             String direccion = cursor.getString(cursor.getColumnIndexOrThrow("direccion"));
             String tipo = cursor.getString(cursor.getColumnIndexOrThrow("tipo"));
-            lugares.add(new objLugar(cuidad, nombre, telefono, direccion,tipo));
-            if(buscar(nombre)){
+            lugares.add(new objLugar(cuidad, nombre, telefono, direccion, tipo));
+            if (buscar(nombre)) {
                 hijos[idPadres[posConsulta]][cntHijos[idPadres[posConsulta]]] = nombre;
                 idHijos[idPadres[posConsulta]][cntHijos[idPadres[posConsulta]]] = j;
                 idPadres[j] = idPadres[posConsulta];
                 cntHijos[idPadres[posConsulta]]++;
-            }else{
+            } else {
                 padres[i] = nombre;
                 hijos[i][0] = nombre;
                 idHijos[i][0] = j;
@@ -176,7 +190,7 @@ public class ListaLugares extends AppCompatActivity {
             j++;
         }
         cursor.close();
-        ExpandibleListViewAdapter adapter = new ExpandibleListViewAdapter(ListaLugares.this, cleanArray(padres), cleanMatriz(hijos),lugares,idHijos);
+        ExpandibleListViewAdapter adapter = new ExpandibleListViewAdapter(ListaLugares.this, cleanArray(padres), cleanMatriz(hijos), lugares, idHijos);
         listview.setAdapter(adapter);
         /*listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -193,6 +207,40 @@ public class ListaLugares extends AppCompatActivity {
                 startActivity(intent);fd
             }
         });*/
+    }
+
+    private void deployDatabase() throws IOException {
+//Open your local db as the input stream
+        String packageName = getApplicationContext().getPackageName();
+        String DB_PATH = "/data/data/" + packageName + "/databases/";
+//Create the directory if it does not exist
+        File directory = new File(DB_PATH);
+        if (!directory.exists()) {
+            directory.mkdirs();
+        }
+
+        String DB_NAME = "Cuentenos.db"; //The name of the source sqlite file
+
+        InputStream myInput = getAssets().open("Cuentenos.db");
+
+// Path to the just created empty db
+        String outFileName = DB_PATH + DB_NAME;
+
+//Open the empty db as the output stream
+        OutputStream myOutput = new FileOutputStream(outFileName);
+
+//transfer bytes from the inputfile to the outputfile
+        byte[] buffer = new byte[1024];
+        int length;
+        while ((length = myInput.read(buffer)) > 0) {
+            myOutput.write(buffer, 0, length);
+        }
+
+//Close the streams
+        myOutput.flush();
+        myOutput.close();
+        myInput.close();
+
     }
 
 

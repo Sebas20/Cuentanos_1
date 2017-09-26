@@ -21,7 +21,7 @@
                 android:id="@+id/llRestaurante"
                 android:layout_width="90dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
+                android:layout_marginLeft="10dp"
                 android:orientation="vertical"
                 android:background="@drawable/formas"
                 android:onClick="listarLugares">
@@ -34,6 +34,7 @@
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:text="@string/restaurantes"/>
             </LinearLayout>
             <LinearLayout
@@ -52,6 +53,7 @@
                 <TextView
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
+                    android:textColor="@color/black"
                     android:layout_height="wrap_content"
                     android:text="@string/Bares"/>
             </LinearLayout>
@@ -72,6 +74,7 @@
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:text="@string/hospitales"/>
             </LinearLayout>
         </LinearLayout>
@@ -82,7 +85,7 @@
             <LinearLayout
                 android:layout_width="90dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
+                android:layout_marginLeft="10dp"
                 android:orientation="vertical"
                 android:background="@drawable/formas"
                 android:onClick="listarLugares"
@@ -95,6 +98,7 @@
                 <TextView
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
+                    android:textColor="@color/black"
                     android:layout_height="wrap_content"
                     android:text="@string/universidad"/>
             </LinearLayout>
@@ -115,6 +119,7 @@
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:text="@string/barberias"/>
             </LinearLayout>
             <LinearLayout
@@ -134,6 +139,7 @@
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:text="@string/Compras"/>
             </LinearLayout>
         </LinearLayout>
@@ -144,7 +150,7 @@
             <LinearLayout
                 android:layout_width="90dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
+                android:layout_marginLeft="10dp"
                 android:orientation="vertical"
                 android:background="@drawable/formas"
                 android:onClick="listarLugares"
@@ -158,6 +164,7 @@
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:text="@string/hoteles"/>
             </LinearLayout>
             <LinearLayout
@@ -177,6 +184,7 @@
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:text="@string/veterinarias"/>
             </LinearLayout>
             <LinearLayout
@@ -192,11 +200,14 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/cine"
                     android:layout_gravity="center"/>
+
                 <TextView
-                    android:layout_gravity="center"
+                    android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/cines"/>
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:text="@string/cines" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
@@ -205,7 +216,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.7"
-        android:orientation="vertical">
-    </LinearLayout>
+        android:orientation="vertical"></LinearLayout>
 
 </LinearLayout>

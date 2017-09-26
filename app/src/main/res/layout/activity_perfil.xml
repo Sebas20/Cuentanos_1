@@ -73,6 +73,7 @@
                     android:layout_height="wrap_content"
                     android:drawableLeft="@drawable/nombre"
                     android:enabled="false"
+                    android:textColor="@color/black"
                     android:hint="@string/nombre"
                     android:inputType="textCapSentences" />
             </android.support.design.widget.TextInputLayout>
@@ -92,6 +93,7 @@
                     android:layout_height="wrap_content"
                     android:drawableLeft="@drawable/correo"
                     android:enabled="false"
+                    android:textColor="@color/black"
                     android:hint="@string/correo" />
             </android.support.design.widget.TextInputLayout>
 

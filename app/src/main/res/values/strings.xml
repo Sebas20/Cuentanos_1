@@ -1,0 +1,93 @@
+<resources>
+    <string name="app_name">Cuentanos</string>
+    <string name="correo">Correo</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="iniciar">Iniciar</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="reptir_contrasena">Repetir Contraseña</string>
+    <string name="miperfil">Mi perfil</string>
+    <string name="cerrarSes">Cerrar Sesión</string>
+    <string name="nombre">Nombre</string>
+    <string name="edad">Edad</string>
+    <string name="principal">Principal</string>
+    <string name="Cargar">Cargar</string>
+    <string name="fecha">Fecha de Nacimiento</string>
+    <string name="masculino">Masculino</string>
+    <string name="femenino">Femenino</string>
+    <string name="genero">Género:</string>
+    <string name="buscar">Buscar</string>
+    <string name="restaurantes">Restaurantes</string>
+    <string name="tienda_mascotas">Tienda de Mascotas</string>
+    <string name="bares">Bares</string>
+    <string name="salon_belleza">Salones de Belleza</string>
+
+    <string-array name="Errores">
+        <item>Contraseña Invalida</item>
+        <item>Correo Invalido</item>
+        <item>Contraseña no Coinciden</item>
+        <item>Campo Vacio</item>
+        <item>Usuario no Existente</item>
+    </string-array>
+
+    <string name="facebook_app_id">301244777011259</string>
+    <string name="fb_login_protocol_scheme">fb301244777011259</string>
+    <string name="Preferencias">Preferencias:</string>
+    <string name="olvidar_contrasena">¿Olvidaste Tu Contraseña?</string>
+    <string name="ver_contrasena">Ver Contraseña</string>
+    <string name="login">Login</string>
+    <string name="registro">Registrar</string>
+    <string name="perfil">Mi Perfil</string>
+    <string name="ventana">Principal</string>
+    <string name="ciudad">Ciudad:</string>
+    <string name="guardar">Guardar</string>
+    <string name="salir">Salir</string>
+    <string name="caracteres_contra">mínimo 4 caracteres</string>
+    <string name="olvidar">Recupera tu contraseña</string>
+    <string name="Recuperar">Recuperar</string>
+    <string name="dir_email">Dirección de Correo</string>
+
+
+    <string-array name="ciudades">
+        <item>Seleccione</item>
+        <item>Armenia</item>
+        <item>Apartadó</item>
+        <item>Barranquilla</item>
+        <item>Bello</item>
+        <item>Bogotá</item>
+        <item>Bucaramanga</item>
+        <item>Buenaventura</item>
+        <item>Buga</item>
+        <item>Cali</item>
+        <item>Cartagena</item>
+        <item>Cúcuta</item>
+        <item>Envigado</item>
+        <item>Florencia</item>
+        <item>Girardot</item>
+        <item>Ibagué</item>
+        <item>Ipiales</item>
+        <item>Itaguí</item>
+        <item>Leticia</item>
+        <item>Medellín</item>
+        <item>Manizales</item>
+        <item>Montería</item>
+        <item>Mocoa</item>
+        <item>Neiva</item>
+        <item>Palmira</item>
+        <item>Pasto</item>
+        <item>Pereira</item>
+        <item>Popayán</item>
+        <item>Quibdó</item>
+        <item>Rionegro</item>
+        <item>Riohacha</item>
+        <item>Santa Marta</item>
+        <item>Sincelejo</item>
+        <item>Soacha</item>
+        <item>Tunja</item>
+        <item>Tuluá</item>
+        <item>Tumaco</item>
+        <item>Yopal</item>
+        <item>Valledupar</item>
+        <item>Villavicencio</item>
+    </string-array>
+
+</resources>

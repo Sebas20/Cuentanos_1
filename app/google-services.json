@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "991613406499",
+    "project_id": "myapp-180603"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991613406499:android:c17031b1acd576d6",
+        "android_client_info": {
+          "package_name": "com.sebastian.my_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "991613406499-ihk4mt78pca78tce7brrgpvbcd3rs4lo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sebastian.my_app",
+            "certificate_hash": "f1fc0ad743c4a72962d12d3fb842056a43287422"
+          }
+        },
+        {
+          "client_id": "991613406499-cem4t2trn4bl6ft3kdgaobm72qlugeho.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0jM6JvW4sKbTOnlD1X7Gtr-yfjA0ziVs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

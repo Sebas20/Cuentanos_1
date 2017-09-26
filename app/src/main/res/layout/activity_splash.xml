@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sebastian.my_app.SplashActivity">
+
+    <LinearLayout
+        android:layout_marginTop="100sp"
+        android:layout_marginLeft="40sp"
+        android:layout_width="300sp"
+        android:layout_height="300sp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/gif_logo_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</LinearLayout>

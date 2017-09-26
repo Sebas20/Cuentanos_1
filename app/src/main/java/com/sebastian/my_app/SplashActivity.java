@@ -36,7 +36,7 @@ public class SplashActivity extends AppCompatActivity {
     String nombre_go, correo_go,img_url_go;
     String nombre_perfil,ciudad_perfil,genero_perfil,fecha_perfil,correo_perfil,flag_guardar="NA",direccion_foto;
     private GoogleApiClient googleApiClient;
-
+    ////
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

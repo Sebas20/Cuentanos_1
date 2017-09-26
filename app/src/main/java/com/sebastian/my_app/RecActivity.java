@@ -11,6 +11,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.util.Properties;
@@ -33,6 +34,7 @@ public class RecActivity extends AppCompatActivity {
     public String direccion, aleatorio, codigo;
     public EditText email;
     public Button recuperar;
+    ImageView iconoCorreo;
 
     private final Properties properties = new Properties();
     private Session session;
@@ -45,6 +47,7 @@ public class RecActivity extends AppCompatActivity {
 
         email = (EditText) findViewById(R.id.eEmail);
         recuperar = (Button) findViewById(R.id.bRecuperar);
+        iconoCorreo = (ImageView) findViewById(R.id.iIcono_correo);
         ////////////////////////Verificacion internet////////////////////////////////////////////////
 
         if (!verificaConexion(this)) {
@@ -125,6 +128,16 @@ public class RecActivity extends AppCompatActivity {
                         //de no hacer nada con la excepcion, lanzarla para que el modulo
                         //superior la capture y avise al usuario con un popup, por ejemplo.
                     }
+                }
+            }
+        });
+        email.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+                    iconoCorreo.setImageResource(R.drawable.ic_email_rojo);
+                } else {
+                    iconoCorreo.setImageResource(R.drawable.ic_email);
                 }
             }
         });

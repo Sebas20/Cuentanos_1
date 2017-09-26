@@ -16,7 +16,6 @@
     <string name="femenino">Femenino</string>
     <string name="genero">Género:</string>
     <string name="buscar">Buscar</string>
-    <string name="restaurantes">Restaurantes</string>
     <string name="tienda_mascotas">Tienda de Mascotas</string>
     <string name="bares">Bares</string>
     <string name="salon_belleza">Salones de Belleza</string>
@@ -45,6 +44,16 @@
     <string name="olvidar">Recupera tu contraseña</string>
     <string name="Recuperar">Recuperar</string>
     <string name="dir_email">Dirección de Correo</string>
+    <string name="restaurantes">Restaurantes</string>
+    <string name="Bares">Bares</string>
+    <string name="hospitales">Hospitales</string>
+    <string name="hoteles">Hoteles</string>
+    <string name="universidad">Universidades</string>
+    <string name="barberias">Barberías</string>
+    <string name="Supermercados">Supermercados</string>
+    <string name="veterinarias">Veterinarias</string>
+    <string name="Compras">Compras</string>
+    <string name="cines">Cines</string>
 
 
     <string-array name="ciudades">

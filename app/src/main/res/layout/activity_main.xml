@@ -4,132 +4,208 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.sebastian.my_app.MainActivity">
+    tools:context="com.sebastian.my_app.loggin"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:orientation="horizontal">
-
-        <EditText
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/bordes_buscar"
-            android:hint="@string/buscar"
-            android:padding="8dp"
-            android:singleLine="true" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="-1dp"
-            android:background="@drawable/bordes_imageview_buscar"
-            android:padding="5dp"
-            android:src="@android:drawable/ic_menu_search" />
-
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5">
+            <LinearLayout
+                android:id="@+id/llRestaurante"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:orientation="vertical"
+                android:background="@drawable/formas"
+                android:onClick="listarLugares">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/restaurantes"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/restaurantes"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llBares"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+                android:orientation="vertical"
+                android:background="@drawable/formas"
+                android:onClick="listarLugares">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bares"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Bares"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+                android:orientation="vertical"
+                android:background="@drawable/formas"
+                android:onClick="listarLugares"
+                android:id="@+id/llHospitales">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/hospitales"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hospitales"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5">
+            <LinearLayout
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:orientation="vertical"
+                android:background="@drawable/formas"
+                android:onClick="listarLugares"
+                android:id="@+id/llUniversidades">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/universidad"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/universidad"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+                android:orientation="vertical"
+                android:background="@drawable/formas"
+                android:onClick="listarLugares"
+                android:id="@+id/llBarberias">
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/barbershop"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/barberias"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+                android:orientation="vertical"
+                android:background="@drawable/formas"
+                android:onClick="listarLugares"
+                android:id="@+id/llCompras">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/mercado"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Compras"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5">
+            <LinearLayout
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:orientation="vertical"
+                android:background="@drawable/formas"
+                android:onClick="listarLugares"
+                android:id="@+id/llHoteles">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/hoteles"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hoteles"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+                android:orientation="vertical"
+                android:background="@drawable/formas"
+                android:onClick="listarLugares"
+                android:id="@+id/llVeterinarias">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/veterinarias"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/veterinarias"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+                android:orientation="vertical"
+                android:background="@drawable/formas"
+                android:onClick="listarLugares"
+                android:id="@+id/llCine">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cine"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cines"/>
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="8dp"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:src="@drawable/restaurante" />
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/restaurantes"
-                android:textColor="@color/black"
-                android:textSize="15dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:layout_marginRight="25dp"
-            android:layout_marginTop="8dp"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:src="@drawable/tienda_mascotas" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tienda_mascotas"
-                android:textColor="@color/black"
-                android:textSize="15dp" />
-        </LinearLayout>
+        android:layout_weight="0.7"
+        android:orientation="vertical">
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="0dp"
-        android:layout_weight="3"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="8dp"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:src="@drawable/bares"
-                android:textAlignment="center" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:text="@string/bares"
-                android:textColor="@color/black"
-                android:textSize="15dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:layout_marginRight="25dp"
-            android:layout_marginTop="8dp"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:src="@drawable/salon_belleza" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/salon_belleza"
-                android:textColor="@color/black"
-                android:textSize="15dp" />
-        </LinearLayout>
-    </LinearLayout>
-
 
 </LinearLayout>

@@ -93,9 +93,9 @@
 
                     <EditText
                         android:id="@+id/eContrasena"
-                        android:focusable="true"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:focusable="true"
                         android:hint="@string/contrasena"
                         android:inputType="textPassword"
                         android:maxLength="8" />
@@ -132,8 +132,8 @@
                 style="@style/FacebookLoginButton"
                 android:layout_width="200dp"
                 android:layout_height="40dp"
-                android:layout_marginTop="0dp"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp" />
         </LinearLayout>
 
         <LinearLayout

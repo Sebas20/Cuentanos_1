@@ -3,7 +3,7 @@
     package="com.sebastian.my_app">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -39,10 +39,11 @@
         <activity
             android:name=".PerfilActivity"
             android:label="@string/perfil" />
-
-        <activity android:name=".RecActivity"
-            android:label="@string/Recuperar"/>
-
+        <activity
+            android:name=".RecActivity"
+            android:label="@string/Recuperar" />
+        <activity android:name=".ListaLugares" />
+        <activity android:name=".infoLugar"></activity>
     </application>
 
 </manifest>

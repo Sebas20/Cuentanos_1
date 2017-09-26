@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.facebook.login.LoginManager;
@@ -28,6 +30,11 @@ public class MainActivity extends AppCompatActivity {
     String flag_loggin;
     String img_url_face,img_url_go;
     GoogleApiClient googleApiClient;
+    //////
+    private LinearLayout llRestaurantes, llHospitales, llBarberias, llBares, llUniversidades, llVeterinarias, llCompras, llCines, llHoteles;
+    private ListView listview;
+    private String consulta = "";
+    //////////
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,7 +77,17 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Error Loggin", Toast.LENGTH_SHORT).show();
             }
         }).addApi(Auth.GOOGLE_SIGN_IN_API,gso).build();
-
+        ////////////////////////////////
+        llRestaurantes = (LinearLayout) findViewById(R.id.llRestaurante);
+        llHospitales = (LinearLayout) findViewById(R.id.llHospitales);
+        llBarberias = (LinearLayout) findViewById(R.id.llBarberias);
+        llBares = (LinearLayout) findViewById(R.id.llBares);
+        llVeterinarias = (LinearLayout) findViewById(R.id.llVeterinarias);
+        llUniversidades = (LinearLayout)findViewById(R.id.llUniversidades);
+        llCompras = (LinearLayout) findViewById(R.id.llCompras);
+        llCines = (LinearLayout) findViewById(R.id.llCine);
+        llHoteles = (LinearLayout) findViewById(R.id.llHoteles);
+        ///////////////////////////////
 
     }
 
@@ -163,4 +180,44 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    ////////////////////////////////
+    public void listarLugares(View view) {
+        int id = view.getId();
+
+        switch(id){
+            case R.id.llRestaurante:
+                consulta = "restaurantes";
+                break;
+            case R.id.llHospitales:
+                consulta = "hospitales";
+                break;
+            case R.id.llBarberias:
+                consulta = "barberias";
+                break;
+            case R.id.llBares:
+                consulta = "bares";
+                break;
+            case R.id.llVeterinarias:
+                consulta = "veterinarias";
+                break;
+            case R.id.llUniversidades:
+                consulta = "universidades";
+                break;
+            case R.id.llCompras:
+                consulta = "compras";
+                break;
+            case R.id.llCine:
+                consulta = "cines";
+                break;
+            case R.id.llHoteles:
+                consulta = "hoteles";
+                break;
+        }
+
+        Intent intent = new Intent(MainActivity.this,ListaLugares.class);
+        intent.putExtra("consulta",consulta);
+        startActivity(intent);
+    }
+    //////////////////////////////////////////////////////7
 }

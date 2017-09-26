@@ -99,6 +99,7 @@ public class PerfilActivity extends AppCompatActivity {
         mes = C.get(Calendar.MONTH);
         dia = C.get(Calendar.DAY_OF_MONTH);
         year = C.get(Calendar.YEAR);
+        //
         if (extras != null) {
             flag_loggin = extras.getString("flag_loggin");
             flag_guardar = extras.getString("flag_guardar");
